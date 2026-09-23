@@ -15,7 +15,12 @@ const defaultStatuses = [
 ];
 
 const defaultDynamicFields = [
-  { key: "interest", label: "Interesse" },
+  { key: "Attivita attuale", label: "Attivita attuale" },
+  { key: "Iscritto RUI", label: "Iscritto RUI" },
+  { key: "Portafoglio clienti", label: "Portafoglio clienti" },
+  { key: "Esperienza (anni)", label: "Esperienza (anni)" },
+  { key: "Tipo collaborazione", label: "Tipo collaborazione" },
+  { key: "Perche interessato", label: "Perche ti interessa il Progetto Realto" },
 ];
 
 const legacyFirstTemplate = "Ciao {{nome}}, ti contatto per la richiesta che hai inviato su {{campagna}}. Quando ti sarebbe comodo sentirci?";
@@ -431,7 +436,6 @@ function renderExpanded(lead) {
       ${field("Email", lead.email)}
       ${field("Citta", lead.city)}
       ${field("Fonte", lead.source)}
-      ${field("Interesse", lead.interest)}
       ${field("Arrivato", formatDate(lead.createdAt))}
     </div>
 
